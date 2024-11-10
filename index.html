@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 
     <title>MasterDots Gmae</title>
 </head>
 <body>
+    <!-- CABEZERA -->
+    <header>
+        <img src="./img/masterdots_logo.png" alt="Logo MasterDots">
+    </header>
+
+    <!-- CUERPO -->
+    <main>
+        <form action="#">
+            <div class="itemform">
+                <label for="nick">Introduce tu nick</label>
+                <input type="text" name="nick" id="nicka" value="@" readonly>
+                <input type="text" name="nick" id="nick">
+            </div>
+            <div class="itemform">
+                <label for="nick">Introduce tu nick</label>
+                <input type="email" name="email" id="email" placeholder="exaple@gmail.com">
+            </div>
+            <div class="itemform">
+                <label for="size">Tamaño del grid</label>
+                <select name="size" id="size">
+                    <option value="">-- Seleccione un tamaño --</option>
+                    <option value="1">4x4</option>
+                    <option value="2">5x5</option>
+                    <option value="3">6x6</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <input type="submit" value="JUGAR">
+            </div>
+        </form>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <p>Curso Frontend - HTML, CSS, JS</p>
+    </footer>
     
 </body>
 </html>
