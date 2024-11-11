@@ -1,3 +1,11 @@
+/* Color Theme Swatches in Hex 
+.Space-Invaders-1-hex { color: #D93D3D; }
+.Space-Invaders-2-hex { color: #D9CF43; }
+.Space-Invaders-3-hex { color: #94E1F2; }
+.Space-Invaders-4-hex { color: #2384D9; }
+.Space-Invaders-5-hex { color: #2573D9; }
+*/
+
 body{
     background-color: #f5f5f5;
     font-family: "Jersey 10", sans-serif;
@@ -69,6 +77,13 @@ select{
     text-align: center;
     background-color: #c7c7c7;
     padding: 10px;
+}
+
+#error{
+    text-align: center;
+    color: #D93D3D;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 /* RESPONSIVE */
