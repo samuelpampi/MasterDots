@@ -8,6 +8,11 @@ const email = document.getElementById("email");
 const size = document.getElementById("size");
 const error = document.getElementById("error");
 
+//Comprobar si existe error en la sesion
+if(sessionStorage.getItem('error')){
+    error.innerText = sessionStorage.getItem('error');
+    sessionStorage.removeItem('error');
+}
 
 //Funciones
 function comprobarFormulario(event){
@@ -29,6 +34,7 @@ function comprobarFormulario(event){
         return false;
     }
 
+    datosUsuario(nick);
     return true;
 }
 
