@@ -1,5 +1,8 @@
-/* COMPROBACION DE DATOS DEL FORMULARIO */
-
+/**
+ * JS inicio para el formulario de entrada 
+ * @author Samuel Pampillón <samuelpampillonroa@gmail.com>
+ * {@link https://github.com/samuelpampi/MasterDots GitHub}
+ */
 
 //Iniciación de variables
 const botonJugar = document.getElementById("btnJugar");
@@ -15,6 +18,12 @@ if(sessionStorage.getItem('error')){
 }
 
 //Funciones
+/**
+ * Comprueba que los datos del formulario sean validos y muestra un error si no lo son, si pasa con exito los guarda
+ *
+ * @param {*} event
+ * @returns {boolean}
+ */
 function comprobarFormulario(event){
     if(nick.value.length==0){
         nick.focus();
@@ -34,9 +43,11 @@ function comprobarFormulario(event){
         return false;
     }
 
-    datosUsuario(nick);
+    datosUsuario(nick, email, size);
     return true;
 }
 
 //Inicio y carga de eventos
 botonJugar.addEventListener('click', comprobarFormulario);
+//Cargar geolocalizacion
+getGeolocalizacion();

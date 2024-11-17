@@ -1,3 +1,9 @@
+/**
+ * JS del funcionamiento del juego
+ * @author Samuel Pampillón <samuelpampillonroa@gmail.com>
+ * {@link https://github.com/samuelpampi/MasterDots GitHub}
+ */
+
 //Obtenemos los datos del usuario
 getDatosUsuario();
 
