@@ -4,18 +4,15 @@
  * {@link https://github.com/samuelpampi/MasterDots GitHub}
  */
 
-//Iniciación de variables
-const botonJugar = document.getElementById("btnJugar");
-const nick = document.getElementById("nick");
-const email = document.getElementById("email");
-const size = document.getElementById("size");
-const error = document.getElementById("error");
-
-//Comprobar si existe error en la sesion
-if(sessionStorage.getItem('error')){
-    error.innerText = sessionStorage.getItem('error');
-    sessionStorage.removeItem('error');
-}
+//Variables
+var botonJugar;
+var nick;
+var email;
+var size;
+var error;
+var avatarItems;
+var avatarImg; //Avatar que esta en el drag
+var selectedAvatar;
 
 //Funciones
 /**
@@ -43,11 +40,46 @@ function comprobarFormulario(event){
         return false;
     }
 
-    datosUsuario(nick, email, size);
+    datosUsuario(nick, email, size, selectedAvatar);
     return true;
 }
 
+/** Inicializa las variables y comprobaciones iniciales del documento, una vez esté cargado */
+function initDocument(){
+    //Inicializamos las variables
+    botonJugar = document.getElementById("btnJugar");
+    nick = document.getElementById("nick");
+    email = document.getElementById("email");
+    size = document.getElementById("size");
+    error = document.getElementById("error");
+    avatarItems = document.getElementsByClassName("avatarImgItem"); //Imagenes de avatares que selecciona el usuario
+    selectedAvatar = document.getElementById("avatarImg");
+
+    //Comprobar si existe error en la sesion
+    if(sessionStorage.getItem('error')){
+        error.innerText = sessionStorage.getItem('error');
+        sessionStorage.removeItem('error');
+    }
+
+    botonJugar.addEventListener('click', comprobarFormulario);
+
+    //Eventos Drag & Drop
+    for(let item of avatarItems){
+        item.addEventListener('dragstart', event => {
+            avatarImg = event.target.src; //Asignamos a avatarImg la fuente del avatar que estamos moviendo
+        });
+    }
+    
+    selectedAvatar.addEventListener('dragover', event => {
+        event.preventDefault();
+    });
+
+    selectedAvatar.addEventListener('drop', event => {
+        selectedAvatar.src = avatarImg;
+    });
+}
+
 //Inicio y carga de eventos
-botonJugar.addEventListener('click', comprobarFormulario);
+document.addEventListener('DOMContentLoaded', initDocument);
 //Cargar geolocalizacion
 getGeolocalizacion();

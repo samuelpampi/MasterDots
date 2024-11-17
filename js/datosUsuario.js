@@ -7,6 +7,7 @@
 var nickSession;
 var emailSession;
 var sizeSession;
+var avatarSession;
 var geolocationTxt;
 
 
@@ -16,20 +17,23 @@ var geolocationTxt;
  * @param {HTMLElement} nick
  * @param {HTMLElement} email
  * @param {HTMLElement} size
+ * @param {HTMLElement} avatar
  */
-function datosUsuario(nick, email, size){
+function datosUsuario(nick, email, size, avatar){
     sessionStorage.setItem('nick', nick.value);
     sessionStorage.setItem('email', email.value);
     sessionStorage.setItem('size', size.value);
     sessionStorage.setItem('geolocation', geolocationTxt);
+    sessionStorage.setItem('avatar', avatar.src);
 }
 
 
 /** Recupera las variables de session */
 function getDatosUsuario(){
     nickSession = sessionStorage.getItem('nick');
-    emailSession = sessionStorage.getItem('nick');
-    sizeSession = sessionStorage.getItem('nick');
+    emailSession = sessionStorage.getItem('email');
+    sizeSession = sessionStorage.getItem('size');
+    avatarSession = sessionStorage.getItem('avatar');
 }
 
 /**

@@ -111,3 +111,46 @@ select{
         font-size: 18px; 
     }
 }
+
+
+/* Avatares */
+
+.selector-avatar{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#avatar{
+    background-color: #c0eaff;
+    border: 1px solid #2384D9;
+    border-radius: 8px;
+    width: 185px;
+    height: 185px;
+}
+
+#avatarGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 64px 64px;
+    gap: 5px;
+}
+
+.avatarItem{
+    background-color: #fff;
+    border: 1px solid #2384D9;
+    border-radius: 6px;
+    width: 62px;
+    height: 62px;
+}
+
+.avatarImgItem{
+    width: 62px;
+}
+
+#avatarGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 64px 64px;
+    gap: 5px;
+}
