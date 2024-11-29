@@ -35,41 +35,45 @@
                 <label for="size">Tamaño del grid</label>
                 <select name="size" id="size">
                     <option value="0">-- Seleccione un tamaño --</option>
-                    <option value="1">4x4</option>
-                    <option value="2">5x5</option>
-                    <option value="3">6x6</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                    <option value="6">6x6</option>
                 </select>
             </div>
             <div class="itemform">
                 <input type="submit" value="JUGAR" id="btnJugar">
             </div>
 
-            <div class="itemform selector-avatar">
+            <div class="itemform">
                 <!-- Avatar seleccionado por el usuario -->
-                <div id="avatar">
-                    <img src="./img/thor.png" id="avatarImg" alt="">
-                </div>
-
-                <!-- Grid de avatares -->
-                <div id="avatarGrid">
-                    <div class="avatarItem">
-                        <img src="./img/batman.png" class="avatarImgItem" alt="avatar batman" draggable="true">
+                <label for="avatar">Avatar</label>
+                <div class="selector-avatar">
+                    <div id="avatar">
+                        <img src="./img/batman.png" id="avatarImg" alt="">
                     </div>
-                    <div class="avatarItem">
-                        <img src="./img/capitan.png" class="avatarImgItem" alt="avatar capitan" draggable="true">
+    
+                    <!-- Grid de avatares -->
+                    <div id="avatarGrid">
+                        <div class="avatarItem">
+                            <img src="./img/batman.png" class="avatarImgItem" alt="avatar batman" draggable="true">
+                        </div>
+                        <div class="avatarItem">
+                            <img src="./img/capitan.png" class="avatarImgItem" alt="avatar capitan" draggable="true">
+                        </div>
+                        <div class="avatarItem">
+                            <img src="./img/ironman.png" class="avatarImgItem" alt="avatar ironman" draggable="true">
+                        </div>
+                        <div class="avatarItem">
+                            <img src="./img/spiderman.png" class="avatarImgItem" alt="avatar spiderman" draggable="true">
+                        </div>
+                        <div class="avatarItem">
+                            <img src="./img/superman.png" class="avatarImgItem" alt="avatar superman" draggable="true">
+                        </div>
+                        <div class="avatarItem">
+                            <img src="./img/thor.png" class="avatarImgItem" alt="avatar thor" draggable="true">
+                        </div>
                     </div>
-                    <div class="avatarItem">
-                        <img src="./img/ironman.png" class="avatarImgItem" alt="avatar ironman" draggable="true">
-                    </div>
-                    <div class="avatarItem">
-                        <img src="./img/spiderman.png" class="avatarImgItem" alt="avatar spiderman" draggable="true">
-                    </div>
-                    <div class="avatarItem">
-                        <img src="./img/superman.png" class="avatarImgItem" alt="avatar superman" draggable="true">
-                    </div>
-                    <div class="avatarItem">
-                        <img src="./img/thor.png" class="avatarImgItem" alt="avatar thor" draggable="true">
-                    </div>
+                    
                 </div>
             </div>
         </form>

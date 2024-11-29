@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/juego_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
@@ -13,7 +13,36 @@
     <title>MasterDots Game</title>
 </head>
 <body>
-    <h1>JUEGO MASTERDOTS</h1>
+    <main>
+        <div id="contenedorJuego">
+            <div id="juego">
+                <!--Se rellena de forma automatica-->
+            </div>
+            <div id="tituloJuego">
+                <p>MASTERDOTS</p>
+            </div>
+        </div>
+        <div id="contenedorUsuario">
+            <form id="form_entrada" action="juego.html">
+                <div class="itemform">
+                    <img id="avatarImg" src="./img/batman.png" alt="avatar" width="40">
+                    <input type="text" name="nick" id="nick" readonly>
+                </div>
+                <div class="itemform">
+                    <label for="puntuacion">Puntuacion</label>
+                    <input type="text" name="puntuacion" id="puntuacion" class="inputJuego" value="0" readonly>
+                </div>
+                <div class="itemform">
+                    <label for="tiempo">Tiempo restante</label>
+                    <input type="text" name="tiempo" id="tiempo" class="inputJuego" value="30" readonly>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+        <p>Curso Frontend - HTML, CSS, JS</p>
+    </footer>
     
     <!-- JAVASCRIPT -->
     <script src="./js/datosUsuario.js"></script>
